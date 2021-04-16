@@ -1,0 +1,14 @@
+body {
+    margin: 0px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+a:hover {
+    font-weight: 500;
+    transform: rotate(-4deg) scale(1.1);
+    transition: 0.8s;
+}
