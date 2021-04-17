@@ -10,12 +10,14 @@ const StyledButton = styled.button`
   border-radius: 4px;
   outline: none;
   cursor: pointer;
+  transition: 0.5s ease-out;
   :hover {
+    background-color: #A18288;
+    color: black;
     transform: scale(1.05);
     -webkit-box-shadow: 4px 6px 13px -3px rgba(64, 64, 64, 0.7);
     -moz-box-shadow: 4px 6px 13px -3px rgba(64, 64, 64, 0.7);
     box-shadow: 4px 6px 13px -3px rgba(64, 64, 64, 0.7);
-    transition: 0.8s;
   }
 `;
 

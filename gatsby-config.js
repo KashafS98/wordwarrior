@@ -16,6 +16,9 @@ module.exports = {
         path: `${__dirname}/content/blog`,
       },
     },    
-    'gatsby-plugin-netlify'
+    'gatsby-plugin-netlify',
+    `gatsby-plugin-image`,
+    `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
   ],
 };

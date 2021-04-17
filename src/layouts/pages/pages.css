@@ -2,13 +2,32 @@ body {
     margin: 0px;
 }
 
-a {
-    text-decoration: none;
-    color: black;
-}
-
-a:hover {
-    font-weight: 500;
-    transform: rotate(-4deg) scale(1.1);
-    transition: 0.8s;
-}
+/* Tooltip container */
+u {
+    position: relative;
+    display: inline-block; /* If you want dots under the hoverable text */
+  }
+  
+  /* Tooltip text */
+  u .tooltiptext {
+    visibility: hidden;
+    width: 500px;
+    opacity: 0.8;
+    background-color: rgba(255, 255, 255);
+    color: rgba(0, 0, 0, 0.571);
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+    transition: 1s ease-in;
+   
+    /* Position the tooltip text - see examples below! */
+    position: absolute;
+    z-index: 1;
+    top: -5px;
+    right: 105%;
+  }
+  
+  /* Show the tooltip text when you mouse over the tooltip container */
+u:hover .tooltiptext {
+    visibility: visible;
+  }
