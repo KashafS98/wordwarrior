@@ -20,14 +20,37 @@ export default class ContactForm extends React.Component {
     });
   };
 
-  handleSubmit = (event) => {
-    event.preventDefault();
-    console.log(this.state);
+  encode(data) {
+    return Object.keys(data)
+      .map((key) => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
+      .join('&')
+  }
+
+  handleSubmit = (e) => {
+    e.preventDefault();
+    const form = e.target
+    fetch('/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: this.encode({
+        'form-name': form.getAttribute('name'),
+        ...this.state,
+      }),
+    })
+      .then(() => alert('Thank you for contacting Wordwarrior! We will get back to you soon.'))
+      .catch((error) => alert(error))
   };
 
   render() {
     return (
-      <StyledForm onSubmit={this.handleSubmit} netlify>
+      <StyledForm 
+        name="contact"
+        method="post"
+        data-netlify="true"
+        data-netlify-honeypot="bot-field"
+        onSubmit={this.handleSubmit}
+      >
+          <input type="hidden" name="form-name" value="contact" />
         <LeftSide>
           <h1>Let's Talk.</h1>
           <input
