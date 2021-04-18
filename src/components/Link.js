@@ -1,13 +1,15 @@
 import React from 'react'
 import styled from 'styled-components'
+import { transformStyle } from '../animations'
 
 const ExternalLinks = styled.a`
     text-decoration: none;
     color: black;
+    transition: 0.3s ease-in;
+    width: 5%;
+    text-align: center;
     :hover {
-        transform: rotate(-4deg) scale(1.1);
-        font-weight: 500;
-        transition: 0.8s;
+        text-decoration: underline;
     }   
 `
 
