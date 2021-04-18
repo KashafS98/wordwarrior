@@ -2,7 +2,7 @@ import React from 'react'
 import logo from '../../images/icon.png'
 import styled from 'styled-components'
 import Link from '../Link'
-import { spin } from '../../animations'
+import { spin, transformStyle } from '../../animations'
 import { navigate } from 'gatsby-link'
 
 const HeaderContainer = styled.div`
@@ -16,10 +16,7 @@ const HeaderContainer = styled.div`
     img {
         width: 8%;
         cursor: pointer;
-        transition: 0.5s ease-in-out;
-        :hover{
-            animation: ${spin} 0.8s;
-        }
+        transition: 0.3s ease-in;
     }
     @media screen and (max-width: 720px){
         img {

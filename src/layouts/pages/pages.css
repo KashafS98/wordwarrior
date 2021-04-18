@@ -2,6 +2,16 @@ body {
     margin: 0px;
 }
 
+::-moz-selection { /* Code for Firefox */
+  color: black;
+  background: #A18288;
+}
+
+::selection {
+  color: black !important;
+  background: #A18288 !important;
+}
+
 /* Tooltip container */
 u {
     position: relative;

@@ -1,5 +1,9 @@
 import {keyframes} from 'styled-components'
 
+export const transformStyle = `
+    transform: scale(1.05);
+`
+
 export const spin = keyframes`
 from {
     transform: scale(1) rotate(0deg);

@@ -24,9 +24,9 @@ export const ImageContainer = styled.div`
         height: 100%;
         position: relative;
         border: 1px solid black;
-        transition: 0.8s;
+        transition: 0.3s ease-in;
         :hover {
-            transform: rotate(5deg) scale(1.2);
+            transform: rotate(5deg) scale(1.1);
         }
     }
     @media screen and (max-width: 720px){

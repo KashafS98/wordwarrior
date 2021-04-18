@@ -1,7 +1,8 @@
 module.exports = {
   siteMetadata: {
     title: "wordwarrior's",
-    siteUrl: "https://wordwarrior.netlify.app/"
+    siteUrl: "https://wordwarrior.netlify.app/",
+    description: "Kashaf S, a Full Stack Developer and Creator"
   },
   plugins: [
     "gatsby-plugin-netlify-cms",
@@ -15,7 +16,16 @@ module.exports = {
         name: `blog`,
         path: `${__dirname}/content/blog`,
       },
-    },    
+    }, 
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `WordWarrior`,
+        short_name: `WW`,
+        start_url: `/`,
+        icon: `src/images/icon.png`, 
+      },
+    },   
     'gatsby-plugin-netlify',
     `gatsby-plugin-image`,
     `gatsby-plugin-sharp`,

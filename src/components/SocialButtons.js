@@ -16,11 +16,15 @@ const Container = styled.div`
   display: flex;
   justify-content: space-between;
   margin: 0 auto;
+  margin-bottom: 5%;
   transition: 0.8s ease-in-out;
   ${(props) =>
     props.width
       ? css`
           width: 48%;
+          @media screen and (max-width: 720px){
+            width: 90%;
+          }
           .overlay {
             width: 20px;
             height: 20px;
@@ -90,8 +94,8 @@ const Icon = styled.a`
   color: black;
   background-color: #a18288;
   border-radius: 50%;
-  height: 60px;
   width: 60px;
+  aspect-ratio: 1/1;
   min-width: 2px;
   min-height: 2px;
   display: flex;
@@ -107,13 +111,18 @@ const Icon = styled.a`
   svg {
     transition: 0.2s ease-out;
   }
+  @media screen and (max-width: 720px){
+    width: 40%;
+    aspect-ratio: 1/1;
+    margin: 1%;
+  }
 `;
 
 const Overlay = styled.div`
   width: 100px;
   height: 100px;
-  left: -24px;
-  bottom: -10px;
+  left: -120%;
+  bottom: -1800%;
   border-radius: 50%;
   background: linear-gradient(
     135deg,
@@ -128,7 +137,10 @@ const Overlay = styled.div`
   justify-content: center;
   position: absolute;
   cursor: pointer;
-`;
+  @media screen and (max-width: 720px){
+    left: -500%;
+    bottom: -40px;
+  }`;
 
 export default function SocialButtons() {
   const [width, setwidth] = useState(false);
@@ -199,7 +211,7 @@ export default function SocialButtons() {
         <SiGmail size="30px" />
       </Icon>
       <Overlay className="overlay" onClick={() => setwidth(!width)}>
-        {width ? "x" : "Contact Me"}
+        {width ? "x" : "Social"}
       </Overlay>
     </Container>
   );

@@ -15,7 +15,7 @@ export default function IntroSection() {
     <Container>
       <ImageContainer>
         <div>
-          <Image src={me} alt="hello" />
+          <Image src={me} alt="hello"/>
         </div>
       </ImageContainer>
       <TextContainer>
@@ -84,7 +84,7 @@ export default function IntroSection() {
           </u>
           , dresses, and games!
         </p>
-        <Button onClick={()=>navigate('/contact')}>Contact</Button>
+        <Button onClick={()=>navigate('/contact')} type='primary'>Contact</Button>
       </TextContainer>
     </Container>
   );
