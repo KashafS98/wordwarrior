@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { blush } from "../../utils/colors";
 
 const boxStyle = (height, width) => `
     width: ${width};
@@ -6,28 +7,25 @@ const boxStyle = (height, width) => `
       width: 90%;
     }
     height: ${60 * height}px;
-    border: none;
+    border: 1px solid;
     border-radius: 4px;
     outline: none;
     margin: 2%;
     padding: 3%;
-    background: #BCB0BC;
-    -webkit-box-shadow: 0px 15px 13px -8px rgba(0,0,0,0.57);
-    -moz-box-shadow: 0px 15px 13px -8px rgba(0,0,0,0.57);
-    box-shadow: 0px 15px 13px -8px rgba(0,0,0,0.57);
+    background: ${blush};
     transition: 0.8s ease-in-out;
     :hover {
-        -webkit-box-shadow: 0px 15px 13px 0px rgba(0,0,0,0.57);
-    -moz-box-shadow: 0px 15px 13px 0px rgba(0,0,0,0.57);
-    box-shadow: 0px 15px 13px 0px rgba(0,0,0,0.57);
+      -webkit-box-shadow: 0px 15px 13px -8px rgba(0,0,0,0.57);
+      -moz-box-shadow: 0px 15px 13px -8px rgba(0,0,0,0.57);
+      box-shadow: 0px 15px 13px -8px rgba(0,0,0,0.57);
     }
     :focus {
-        -webkit-box-shadow: 0px 15px 47px -23px rgba(0,0,0,0.57);
-        -moz-box-shadow: 0px 15px 47px -23px rgba(0,0,0,0.57);
-        box-shadow: 0px 15px 47px -23px rgba(0,0,0,0.57);
+      -webkit-box-shadow: 0px 15px 13px -8px rgba(0,0,0,0.57);
+      -moz-box-shadow: 0px 15px 13px -8px rgba(0,0,0,0.57);
+      box-shadow: 0px 15px 13px -8px rgba(0,0,0,0.57);
     }
     ::-webkit-autofill{
-        background: #BCB0BC !important;
+        background: ${blush} !important;
     }
     ::-webkit-input-placeholder {
         color: #6a6e79b5;
@@ -38,9 +36,12 @@ const boxStyle = (height, width) => `
 
 export const StyledForm = styled.form`
   display: flex;
-  width: 50%;
+  width: 60%;
   min-height: 80%;
   margin: 0 auto;
+  @media screen and (max-width: 1200px){
+    width: 90%;
+  }
   @media screen and (max-width: 720px){
     width: 90%;
     flex-direction: column;
@@ -67,7 +68,7 @@ export const LeftSide = styled.div`
     ${boxStyle(1, '90%')}
   }
   select {
-    ${boxStyle(0.8, '90%')}
+    ${boxStyle(1, '90%')}
   }
 `;
 

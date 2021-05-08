@@ -23,9 +23,15 @@ module.exports = {
         name: `WordWarrior`,
         short_name: `WW`,
         start_url: `/`,
-        icon: `src/images/icon.png`, 
+        icon: `src/images/favicon.png`, 
       },
     },   
+    {
+      resolve: `gatsby-plugin-typography`,
+      options: {
+        pathToConfigModule: `src/utils/typography`,
+      },
+    },
     'gatsby-plugin-netlify',
     `gatsby-plugin-image`,
     `gatsby-plugin-sharp`,

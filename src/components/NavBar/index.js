@@ -6,21 +6,33 @@ import { spin, transformStyle } from '../../animations'
 import { navigate } from 'gatsby-link'
 
 const HeaderContainer = styled.div`
-    width: 100%;
+    width: 80%;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     height: 12vh;
     background: transparent;
-    padding: 2% 0;
+    margin: 2% auto;
     img {
-        width: 8%;
+        width: 25%;
         cursor: pointer;
         transition: 0.3s ease-in;
+        margin-bottom: 0
     }
-    @media screen and (max-width: 720px){
+    div{
+        width: 15%;
+    }
+    a{
+        margin-left: 10%;
+        text-decoration: underline;
+    }
+    @media screen and (max-width: 935px){
         img {
-            width: 25%;
+            width: 50%;
+        }
+        div {
+            width: 35%;
+            text-align: right;
         }
     }
 `
@@ -28,9 +40,11 @@ const HeaderContainer = styled.div`
 export default function NavBar() {
     return (
         <HeaderContainer>
-            <Link href="https://art.wordwarrior.in">ART</Link>
             <img src={logo} alt='' onClick={()=>navigate('/')}/>
-            <Link href="https://dev.wordwarrior.in">TECH</Link>
+            <div>
+                <Link href="/">ART</Link>
+                <Link href="/">TECH</Link>
+            </div>
         </HeaderContainer>
     )
 }

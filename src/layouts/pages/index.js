@@ -9,7 +9,6 @@ const Container = styled.section`
     max-heght: 100vh;
     overflow-y: scroll;
     overflow-x: hidden;
-    background-image: url('https://media-public.canva.com/MADGyKvzrRM/4/screen_2x.jpg')
 `
 
 export default function PageLayout(props) {

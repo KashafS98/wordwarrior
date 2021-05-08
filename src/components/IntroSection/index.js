@@ -3,11 +3,11 @@ import {
   Container,
   ImageContainer,
   TextContainer,
+  ButtonWrapper
 } from "./IntroSection.styled";
-import me from "../../images/me.png";
+import me from "../../images/warrior.png";
 import Button from "../Button";
 import Image from "../Image";
-import SVG from "../SVG";
 import { navigate } from "gatsby-link";
 
 export default function IntroSection() {
@@ -21,6 +21,9 @@ export default function IntroSection() {
       <TextContainer>
         <h2>Hello Warriors!</h2>
         <p>
+        I am a Full Stack Developer (tilting towards Front-end), cat person, coffee, pasta, donuts fanatic (sweet tooth for almost all desert with icing), in love with classic novels, fantasy, and murder mystery forever. Literature, Psychology, Music and Cinema enthusiast. Anxious all the time, yet an extrovert with a zest for travel, adventure, mountains, lakes, rivers and parties, dresses, and games!
+        </p>
+        {/* <p>
           I am a{" "}
           <u>
             Full Stack Developer
@@ -83,8 +86,11 @@ export default function IntroSection() {
             </span>
           </u>
           , dresses, and games!
-        </p>
-        <Button onClick={()=>navigate('/contact')} type='primary'>Contact</Button>
+        </p> */}
+        <ButtonWrapper>
+        <Button onClick={()=>navigate('/contact')} type='primary'>Tell me more</Button>
+        <Button onClick={()=>navigate('/contact')} type='secondary'>Tinkle on the bower</Button>
+        </ButtonWrapper>
       </TextContainer>
     </Container>
   );
