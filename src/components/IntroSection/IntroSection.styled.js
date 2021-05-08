@@ -28,9 +28,11 @@ export const ImageContainer = styled.div`
     @media screen and (max-width: 935px){
         width: 50%;
         margin: 0 auto;
+        text-align: center;
     }
     @media screen and (max-width: 500px){
         width: 100%;
+        text-align: center;
     }
 `
 
