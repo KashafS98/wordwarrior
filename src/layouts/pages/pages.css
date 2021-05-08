@@ -1,5 +1,6 @@
 body {
     margin: 0px;
+    background: #EDE8EA;
 }
 
 ::-moz-selection { /* Code for Firefox */
@@ -9,7 +10,7 @@ body {
 
 ::selection {
   color: black !important;
-  background: #A18288 !important;
+  background: #EDE8EA !important;
 }
 
 /* Tooltip container */
@@ -28,7 +29,7 @@ u {
     text-align: center;
     padding: 5px 0;
     border-radius: 6px;
-    transition: 1s ease-in;
+    transition: 0.5s ease-in-out;
    
     /* Position the tooltip text - see examples below! */
     position: absolute;
