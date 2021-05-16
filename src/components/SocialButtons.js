@@ -11,6 +11,7 @@ import {
   SiGmail,
 } from "react-icons/si";
 import { bounce, gelatine, spin } from "../animations";
+import { roseRed } from "../utils/colors";
 
 const Container = styled.div`
   display: flex;
@@ -38,61 +39,13 @@ const Container = styled.div`
         `
       : `width: 2%;`}
   position: relative;
-  .buymeacoffee {
-    :hover {
-      transform: scale(1.2);
-      border: 2px dashed black;
-    }
-  }
-  .twitter {
-    :hover {
-      -webkit-box-shadow: 0px 0px 13px 5px rgba(0, 0, 0, 0.75);
-      -moz-box-shadow: 0px 0px 13px 5px rgba(0, 0, 0, 0.75);
-      box-shadow: 0px 0px 13px 5px rgba(0, 0, 0, 0.75);
-      svg {
-        transform: rotate(-30deg) scale(1.8);
-      }
-    }
-  }
-  .insta1 {
-    :hover {
-      transform: scale(1.2);
-      border-radius: 55% 100% 67% 59% / 100% 60% 46% 39%;
-    }
-  }
-  .git {
-    :hover {
-      animation: ${bounce} 1s;
-    }
-  }
-  .pin {
-    :hover {
-      animation: ${gelatine} 1s;
-    }
-  }
-  .linkedin {
-    :hover {
-      border-radius: 0;
-      transform: rotate(-10deg) scale(1.2);
-    }
-  }
-  .wa {
-    :hover {
-      color: #a18288;
-      background: black;
-      transform: scale(1.2);
-    }
-  }
-  .mail {
-    :hover {
-      transform: scale(1.2) rotateY(180deg);
-    }
-  }
 `;
 
 const Icon = styled.a`
-  color: black;
-  background-color: #a18288;
+background: #EDE8EA;
+box-shadow:  5px 5px 10px #d1ccce,
+             -5px -5px 10px #ffffff;
+  color: ${roseRed};
   border-radius: 50%;
   width: 60px;
   aspect-ratio: 1/1;
@@ -111,6 +64,11 @@ const Icon = styled.a`
   svg {
     transition: 0.2s ease-out;
   }
+  :hover {
+    background: #EDE8EA;
+box-shadow: inset 5px 5px 10px #d1ccce,
+            inset -5px -5px 10px #ffffff;
+  }
   @media screen and (max-width: 720px){
     width: 40%;
     aspect-ratio: 1/1;
@@ -124,13 +82,10 @@ const Overlay = styled.div`
   left: -120%;
   bottom: -1800%;
   border-radius: 50%;
-  background: linear-gradient(
-    135deg,
-    rgba(212, 194, 178, 1) 42%,
-    rgba(220, 167, 155, 1) 100%
-  );
-  box-shadow: 10px 10px 20px #b4a597, -10px -10px 20px #f4dfcd;
-  color: white;
+  background: #EDE8EA;
+box-shadow:  5px 5px 15px #d8d3d5,
+             -5px -5px 15px #fffdff;
+  color: ${roseRed};
   border: #a18288;
   display: flex;
   align-items: center;
@@ -152,7 +107,7 @@ export default function SocialButtons() {
         target="_blank"
         rel="noopener noreferrer"
       >
-        <SiBuymeacoffee size="30px" />
+        <SiBuymeacoffee size="25px" />
       </Icon>
       <Icon
         className="insta1"
@@ -160,7 +115,7 @@ export default function SocialButtons() {
         target="_blank"
         rel="noopener noreferrer"
       >
-        <SiInstagram size="30px" />
+        <SiInstagram size="25px" />
       </Icon>
       <Icon
         className="twitter"
@@ -168,7 +123,7 @@ export default function SocialButtons() {
         target="_blank"
         rel="noopener noreferrer"
       >
-        <SiTwitter size="30px" />
+        <SiTwitter size="25px" />
       </Icon>
       <Icon
         className="git"
@@ -176,7 +131,7 @@ export default function SocialButtons() {
         target="_blank"
         rel="noopener noreferrer"
       >
-        <SiGithub size="30px" />
+        <SiGithub size="25px" />
       </Icon>
       <Icon
         className="pin"
@@ -184,7 +139,7 @@ export default function SocialButtons() {
         target="_blank"
         rel="noopener noreferrer"
       >
-        <SiPinterest size="30px" />
+        <SiPinterest size="25px" />
       </Icon>
       <Icon
         className="linkedin"
@@ -192,7 +147,7 @@ export default function SocialButtons() {
         target="_blank"
         rel="noopener noreferrer"
       >
-        <SiLinkedin size="30px" />
+        <SiLinkedin size="25px" />
       </Icon>
       <Icon
         className="wa"
@@ -200,7 +155,7 @@ export default function SocialButtons() {
         target="_blank"
         rel="noopener noreferrer"
       >
-        <SiWhatsapp size="30px" />
+        <SiWhatsapp size="25px" />
       </Icon>
       <Icon
         className="mail"
@@ -208,7 +163,7 @@ export default function SocialButtons() {
         target="_blank"
         rel="noopener noreferrer"
       >
-        <SiGmail size="30px" />
+        <SiGmail size="25px" />
       </Icon>
       <Overlay className="overlay" onClick={() => setwidth(!width)}>
         {width ? "x" : "Social"}

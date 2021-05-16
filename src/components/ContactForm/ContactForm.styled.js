@@ -7,7 +7,7 @@ const boxStyle = (height, width) => `
       width: 90%;
     }
     height: ${60 * height}px;
-    border: 1px solid;
+    border: 2px solid;
     border-radius: 4px;
     outline: none;
     margin: 2%;
@@ -36,6 +36,7 @@ const boxStyle = (height, width) => `
 
 export const StyledForm = styled.form`
   display: flex;
+  align-items: flex-end;
   width: 60%;
   min-height: 80%;
   margin: 0 auto;
@@ -88,7 +89,7 @@ export const RightSide = styled.div`
     ${boxStyle(4, '100%')};
   }
   button {
-    margin: 5%;
+    margin: 3%;
     width: 40%;
   }
 `;

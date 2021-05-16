@@ -22,35 +22,41 @@ export default class ContactForm extends React.Component {
 
   encode(data) {
     return Object.keys(data)
-      .map((key) => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
-      .join('&')
+      .map(
+        (key) => encodeURIComponent(key) + "=" + encodeURIComponent(data[key])
+      )
+      .join("&");
   }
 
   handleSubmit = (e) => {
     e.preventDefault();
-    const form = e.target
-    fetch('/', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+    const form = e.target;
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: this.encode({
-        'form-name': form.getAttribute('name'),
+        "form-name": form.getAttribute("name"),
         ...this.state,
       }),
     })
-      .then(() => alert('Thank you for contacting Wordwarrior! We will get back to you soon.'))
-      .catch((error) => alert(error))
+      .then(() =>
+        alert(
+          "Thank you for contacting Wordwarrior! We will get back to you soon."
+        )
+      )
+      .catch((error) => alert(error));
   };
 
   render() {
     return (
-      <StyledForm 
+      <StyledForm
         name="contact"
         method="post"
         data-netlify="true"
         data-netlify-honeypot="bot-field"
         onSubmit={this.handleSubmit}
       >
-          <input type="hidden" name="form-name" value="contact" />
+        <input type="hidden" name="form-name" value="contact" />
         <LeftSide>
           <h1>Let's Talk.</h1>
           <input
@@ -90,7 +96,7 @@ export default class ContactForm extends React.Component {
             value={this.state.message}
             onChange={this.handleInputChange}
           />
-          <Button type="submit">Submit</Button>
+          <Button type="primaryOutlined">Submit</Button>
         </RightSide>
       </StyledForm>
     );
