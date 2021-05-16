@@ -6,7 +6,7 @@ I never traveled for pleasure as a kid. Not even with family. Only trips to Odis
 
 After graduation, I started going on more treks and camps, I climbed Maharashtra's highest peak, Kalsubai, 5400ft, which was probably the best life-changing experience I had. Even through I was crying with tiredness on the trek down, it was one memorable achievement. After which, unfortunately, COVID-19 came up and the country was under lockdown. 
 
-When the lockdown was opened, I took more trips, more frequently and finally started to quench my thirst for travel. I love doing adventure activities like Kayaking and I want to do more. On the checklist for now:
+When the lockdown was opened, I took more trips, more frequently and finally started to quench my thirst for travel. I love doing adventure activities like Kayaking, river crossing and I want to do more. On the checklist for now:
 
 * zip lining
 * river rafting
