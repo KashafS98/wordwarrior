@@ -116,7 +116,7 @@ const HeaderContainer = styled.div`
 export default function NavBar({isScrolled}) {
   return (
     <HeaderContainer scroll={isScrolled}>
-      <img src={isScrolled? minLogo :logo} alt="" onClick={() => window.location.href=window.location.origin} />
+      <img src={isScrolled? minLogo :logo} alt="" onClick={() => navigate('/#')} />
       <div>
         <a
           href="https://art.wordwarrior.in"
