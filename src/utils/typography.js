@@ -6,6 +6,7 @@ const typography = new Typography({
   headerLineHeight: 1,
   headerFontFamily: [
     "Poppins",
+    "Dancing Script",
     "Arial",
     "sans-serif",
   ],
@@ -19,6 +20,15 @@ const typography = new Typography({
     },
     {
       name: 'DM Sans',
+      styles: [
+        '400',
+        '400i',
+        '700',
+        '700i',
+      ],
+    },
+    {
+      name: 'Dancing Script',
       styles: [
         '400',
         '400i',

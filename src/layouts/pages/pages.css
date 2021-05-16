@@ -3,6 +3,18 @@ body {
     background: #EDE8EA;
 }
 
+.contact-icon {
+  position: absolute;
+  width: 14%;
+  top: 85%;
+  left: 88%;
+  cursor: url('../../images/unicorn.png') 5 5, pointer;
+}
+
+a, button{
+  cursor: url('../../images/unicorn.png') 5 5, pointer;
+}
+
 ::-moz-selection { /* Code for Firefox */
   color: black;
   background: #A18288;
