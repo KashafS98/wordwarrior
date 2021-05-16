@@ -6,4 +6,4 @@ Even though I have [Art | Wordwarrior](https://art.wordwarrior.in), dedicated to
 
 I am involved in the following amazing creative arts:
 
-![Ranks out of 10](_word-1-.png)
+![Ranks out of 10](arts.png)

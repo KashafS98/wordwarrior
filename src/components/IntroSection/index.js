@@ -19,7 +19,7 @@ export default function IntroSection() {
         </div>
       </ImageContainer>
       <TextContainer>
-        <h2>Hello Warriors!</h2>
+        <h2>tl;dr</h2>
         <p>
           I am a Full Stack Developer (tilting towards Front-end), cat person,
           coffee, pasta, donuts fanatic (sweet tooth for almost all desert with
@@ -42,10 +42,7 @@ export default function IntroSection() {
             }
             type="primary"
           >
-            Tell me more
-          </Button>
-          <Button onClick={() => navigate("/contact")} type="secondary">
-            Tinkle on the bower
+            I want to know more!
           </Button>
         </ButtonWrapper>
       </TextContainer>

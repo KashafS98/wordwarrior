@@ -39,12 +39,21 @@ export const StyledForm = styled.form`
   align-items: flex-end;
   width: 60%;
   min-height: 80%;
-  margin: 0 auto;
+  margin: 10% auto;
   @media screen and (max-width: 1200px){
     width: 90%;
   }
+  @media screen and (max-width: 935px){
+    margin: 20% auto;
+    margin-bottom: 10%;
+  }
   @media screen and (max-width: 720px){
     width: 90%;
+    flex-direction: column;
+  }
+  @media screen and (max-width: 500px){
+    width: 90%;
+    margin: 20% auto;
     flex-direction: column;
   }
 `;

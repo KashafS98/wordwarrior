@@ -4,6 +4,7 @@ const typography = new Typography({
   baseFontSize: "20px",
   baseLineHeight: 1.2,
   headerLineHeight: 1,
+  scaleRatio: 3,
   headerFontFamily: [
     "Poppins",
     "Dancing Script",
@@ -15,6 +16,7 @@ const typography = new Typography({
     {
       name: 'Poppins',
       styles: [
+        '400',
         '700',
       ],
     },

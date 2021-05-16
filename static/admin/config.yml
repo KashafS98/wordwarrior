@@ -11,7 +11,7 @@ collections:
     folder: 'content/about'
     create: true
     slug: '{{slug}}'
-    media_folder: ''
+    media_folder: '/src/images'
     public_folder: ''
     editor:
       preview: true

@@ -1,14 +1,13 @@
 import React from 'react'
 import { Helmet } from 'react-helmet'
 import ContactForm from '../components/ContactForm'
-import Divider from '../components/Divider'
 import MyContactDetails from '../components/MyContactDetails'
 import PageLayout from '../layouts/pages'
 import logo from '../images/icon.png'
 
 export default function contact() {
     return (
-        <PageLayout>
+        <PageLayout page='contact'>
             <Helmet>
                 <title>Contact | WordWarrior</title>
                 <meta name="description" content="Get in touch with WordWarrior" />
@@ -16,7 +15,6 @@ export default function contact() {
                 <link rel="shortcut icon" type="image/png" href="image/icon.png"></link>
             </Helmet>
             <ContactForm />
-            <Divider/>
             <MyContactDetails/>
         </PageLayout>
     )

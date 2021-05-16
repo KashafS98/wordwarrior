@@ -2,21 +2,21 @@ import styled from 'styled-components'
 
 export const Container = styled.div`
     display: flex;
-    margin: 8% auto;
-    margin-top: 25%;
-    @media screen and (min-width: 1325px){
-        width: 70%;
+    margin: 15% auto;
+    @media screen and (max-width: 1325px){
+        width: 70%;  
     }
-    @media screen and (min-width: 1200px){
+    @media screen and (max-width: 1200px){
         width: 90%;
+        margin: 25% auto;
     }
     @media screen and (max-width: 935px){
         flex-direction: column;
+        margin: 30% auto;
     }
     @media screen and (max-width: 500px){
         flex-direction: column;
     }
-    
 `
 
 export const ImageContainer = styled.div`
@@ -32,7 +32,7 @@ export const ImageContainer = styled.div`
         text-align: center;
     }
     @media screen and (max-width: 500px){
-        width: 100%;
+        width: 80%;
         text-align: center;
     }
 `

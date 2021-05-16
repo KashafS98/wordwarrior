@@ -4,7 +4,7 @@ import minLogo from "../../images/favicon.png";
 import styled from "styled-components";
 import Link from "../Link";
 import { navigate } from "gatsby-link";
-import { blush } from "../../utils/colors";
+import { blush, roseRed } from "../../utils/colors";
 
 const HeaderContainer = styled.div`
   width: 80%;
@@ -25,16 +25,15 @@ const HeaderContainer = styled.div`
     `
       width: 100%;
       left: 0;
-      height: 8vh;
-      background: ${blush};
-      padding: 1% 0 0 1%;
+      background: transparent;
+      padding: 1% 0 0 3%;
       img{
         width : 4%;
         transition: 0.3s step(1, start);
         margin-bottom: 0;
       }
       div{
-        width: 10%;
+        width: 15%;
       }
     `
     :`
@@ -52,6 +51,7 @@ const HeaderContainer = styled.div`
   a {
     margin-left: 10%;
     text-decoration: underline;
+    color: ${roseRed}
   }
   @media screen and (max-width: 935px) {
     ${
@@ -82,14 +82,41 @@ const HeaderContainer = styled.div`
       }
       `
     }
-    
+    @media screen and (max-width: 1200px) {
+      ${
+        props=>
+        props.scroll
+        ?
+        `
+        padding: 5%;
+        padding-top: 10%;
+        align-items: center;
+        img {
+          width: 12%;
+        }
+        div {
+          width: 40%;
+          text-align: right;
+        }
+        `
+        :
+        `
+        img {
+          width: 50%;
+        }
+        div {
+          width: 35%;
+          text-align: right;
+        }
+        `
+      }
   }
 `;
 
 export default function NavBar({isScrolled}) {
   return (
     <HeaderContainer scroll={isScrolled}>
-      <img src={isScrolled? minLogo :logo} alt="" onClick={() => navigate("/")} />
+      <img src={isScrolled? minLogo :logo} alt="" onClick={() => window.location.href=window.location.origin} />
       <div>
         <a
           href="https://art.wordwarrior.in"
@@ -98,7 +125,7 @@ export default function NavBar({isScrolled}) {
         >
           ART
         </a>
-        <Link href="/">TECH</Link>
+        <Link href="https://dev.wordwarrior.in">TECH</Link>
       </div>
     </HeaderContainer>
   );
