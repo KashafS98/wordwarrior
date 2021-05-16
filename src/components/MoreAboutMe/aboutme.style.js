@@ -64,4 +64,7 @@ export const ContentHolder = styled.div`
         margin: 15% auto;
         height: auto;
     }
+    img {
+        width: 80%;
+    }
 `
