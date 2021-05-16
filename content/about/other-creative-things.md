@@ -6,4 +6,4 @@ Even though I have [Art | Wordwarrior](https://art.wordwarrior.in), dedicated to
 
 I am involved in the following amazing creative arts:
 
-![](/src/images/arts.png)
+![Art and creative stuff](https://raw.githubusercontent.com/KashafS98/wordwarrior/master/src/images/arts.png)
