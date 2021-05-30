@@ -8,21 +8,30 @@ const StyledButton = styled.button`
   padding: 0 5%;
   color: ${blush};
   border: none;
-  ${(props) =>
-    props.type === "primary"
-      ? `background-color: ${purple};`
-      : 
-      props.type === "primaryOutlined"
-      ? `background-color: ${blush};
-      border: 2px solid ${roseRed};
-      color: ${roseRed};
-      :hover {
-        background-color: ${roseRed};
-        color: ${blush};
-      }`
-      : `
-      background: ${pink};`
+  ${(props) => {
+    switch (props.type) {
+      case "primary":
+        return `background-color: ${purple};`;
+      case "primaryOutlined":
+        return `background-color: ${blush};
+            border: 2px solid ${roseRed};
+            color: ${roseRed};
+            :hover {
+              background-color: ${roseRed};
+              color: ${blush};
+            }`;
+      case "secondary":
+        return `background-color: ${roseRed};
+              border: 2px solid ${roseRed};
+              color: ${blush};
+              :hover {
+                background-color: ${blush};
+                color: ${roseRed};
+              }`;
+      default:
+        break;
     }
+  }}
   border-radius: 4px;
   outline: none;
   transition: 0.3s ease-in;

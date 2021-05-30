@@ -13,7 +13,7 @@ const boxStyle = (height, width) => `
     margin: 2%;
     padding: 3%;
     background: ${blush};
-    transition: 0.8s ease-in-out;
+    transition: 0.3s ease-in-out;
     :hover {
       -webkit-box-shadow: 0px 15px 13px -8px rgba(0,0,0,0.57);
       -moz-box-shadow: 0px 15px 13px -8px rgba(0,0,0,0.57);

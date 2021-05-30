@@ -68,3 +68,14 @@ export const ContentHolder = styled.div`
         width: 80%;
     }
 `
+
+export const FactsContainer = styled.div`
+    background: ${blush};
+    -webkit-box-shadow: 0px 15px 13px -8px rgb(0 0 0 / 57%);
+    -moz-box-shadow: 0px 15px 13px -8px rgba(0,0,0,0.57);
+    box-shadow: 0px 15px 13px -8px rgb(0 0 0 / 57%);
+    border: 1px solid black;
+    padding: 2%;
+    margin-bottom: 3%;
+    text-align: center;
+`

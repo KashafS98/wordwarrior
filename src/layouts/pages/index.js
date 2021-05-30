@@ -6,6 +6,7 @@ import { Helmet } from "react-helmet";
 import contactIcon from "../../images/contact.png";
 import { navigate } from "gatsby-link";
 import bg from "../../images/bg.png";
+import { roseRed } from "../../utils/colors";
 
 const Container = styled.section`
   min-height: 100vh;
@@ -15,6 +16,9 @@ const Container = styled.section`
   background: url("${bg}") center/cover no-repeat fixed;
   img {
     cursor: url("../../images/unicorn.png");
+  }
+  a{
+    color: ${roseRed}
   }
 `;
 

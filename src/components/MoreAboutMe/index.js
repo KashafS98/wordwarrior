@@ -2,6 +2,7 @@ import React from "react";
 import { useStaticQuery, graphql } from "gatsby";
 import { Container, List } from "./aboutme.style";
 import AboutItem from "./AboutItem";
+import RandomFacts from "./randomfacts";
 
 export default function MoreAboutMe() {
   const data = useStaticQuery(graphql`
@@ -25,12 +26,13 @@ export default function MoreAboutMe() {
         Apparently, who I am matters to you. And that is awesome, because I love
         talking about myself.{" "}
       </h1>
-      <h3>Here are a few areas of my life that are interesting:</h3>
-      <List>
+      <h3>Here are a few random facts about me:</h3>
+      <RandomFacts/>
+      {/* <List>
           {
               data.allMarkdownRemark.edges.map((edge, index)=><AboutItem node={edge.node} index={index}/>)
           }  
-      </List>
+      </List> */}
     </Container>
   );
 }
